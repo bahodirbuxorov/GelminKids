@@ -1,6 +1,6 @@
 {
-    "heroTitle": "Parazitlarsiz baxtli bolalik uchun",
-    "heroSubtitle": "Gelmin Kids - halol, tabiiy va xavfsiz gijjalarga qarshi vosita",
+    "heroTitle": "Sog'lom va beg‘ubor bolalik sari!",
+    "heroSubtitle": "Gelmin Kids — bolalar uchun tabiiy, halol va xavfsiz gijja (parazit)larga qarshi vosita.degan jumlalarga o'zgartirish kerak",
 
     "simptom": {
         "1": "Qorin og'rig'i",
@@ -9,31 +9,31 @@
     },
 
     "card": {
-        "title": "Parazitlarga qarshi tabiiy yechim",
-        "subtitle": "Gelmin Kids — tabiiy himoya va qulay foydalanish"
+        "title": "Gelmin Kids — Parazitlarga qarshi tabiiy yechim",
+        "subtitle": "Farzandingiz salomatligiga g‘amxo‘rlik aynan shu yerda boshlanadi!"
     },
 
     "parasite": {
         "title": "Parazit turlari",
         "1": {
-            "title": "Ostritsa",
-            "subtitle": "Qorin og'rig'i, qichishish, uyqusizlik"
+            "title": "Tasmasimon gijja (Teniarinhoz / Teniyoz)",
+            "subtitle": "Holsizlik, ozib ketish, uyqusizlik, ich qotishi yoki ketishi"
         },
         "2": {
-            "title": "Lentasimon",
-            "subtitle": "Ishtahasizlik, vazn yo'qotish, kuchsizlik"
+            "title": "Qamchi gijja (Trichurioz)",
+            "subtitle": "Ich qotishi yoki ketishi, bosh og‘rishi, holsizlik, ichakdagi noqulaylik"
         },
         "3": {
-            "title": "Lyambliya",
-            "subtitle": "Bezovtalik, ko'ngil aynishi, ich ketishi"
+            "title": "Lyambliya (Lyamblioz)",
+            "subtitle": "Ich ketishi yoki suvsimon najas, qorin dam bo'lishi, bolada o‘sishdan qolish"
         },
         "4": {
-            "title": "Pakana gijja",
-            "subtitle": "Charchoq, allergiya, diqqat susayishi"
+            "title": "Pakana gijja (Enterobioz)",
+            "subtitle": "Tungi anal qichishish, uyqusizlik, asabiylik, ishtaha pasayishi"
         },
         "5": {
-            "title": "Askarida",
-            "subtitle": "Asabiylik, yo'tal, qorin dam bo'lishi"
+            "title": "Aylana gijja (Askaridoz)",
+            "subtitle": "Qorin og‘rig‘i, allergik toshmalar, yo'tal"
         }
     },
 

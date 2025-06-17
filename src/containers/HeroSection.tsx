@@ -35,11 +35,12 @@ const HeroSection = () => {
         <Container className="flex flex-col lg:flex-row items-center justify-between max-[650px]:justify-center min-h-screen px-4 sm:px-6 lg:px-8 py-15 sm:py-12 lg:py-16 gap-6 sm:gap-8 lg:gap-12 xl:gap-16 mx-auto
           max-[650px]:flex-col max-[650px]:gap-10"
         >
-          <div className="w-full max-[650px]:w-full flex justify-center lg:justify-start">
+           <div className="w-full max-[650px]:w-full flex justify-center lg:justify-start max-[650px]:mt-45">
             <img
               src={ProductImage}
               alt="Gelmin Kids"
-              className="w-full h-auto max-w-[200px] max-[650px]:max-w-[70%] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[350px] xl:max-w-[400px] 2xl:max-w-[450px] drop-shadow-2xl object-contain"
+              className="w-full h-auto object-contain drop-shadow-2xl 
+                max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[350px] xl:max-w-[400px] 2xl:max-w-[450px]"
             />
           </div>
 
