@@ -5,13 +5,20 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss()
-  ],
+  plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+    }
+  },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://crm.nutva.uz',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+        secure: false, // optional: if you're using self-signed SSL
+      },
     }
   }
 })

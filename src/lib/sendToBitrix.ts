@@ -1,3 +1,5 @@
+// src/lib/sendToBitrix.ts
+
 type FormDataType = {
   name: string;
   phone: string;
@@ -9,7 +11,7 @@ type FormDataType = {
 };
 
 export const sendToBitrix = async (formData: FormDataType) => {
-  const baseUrl = import.meta.env.VITE_REACT_APP_BASE_URL;
+  const baseUrl = '/api/rest/4/7irbhunnsb0rj0x9'; // Updated to use Vite proxy
 
   try {
     let phoneDigits = formData.phone.replace(/[^+\d]/g, "");
@@ -17,6 +19,7 @@ export const sendToBitrix = async (formData: FormDataType) => {
       phoneDigits = `+${phoneDigits}`;
     }
 
+    // Check if contact exists
     const contactSearchRes = await fetch(`${baseUrl}/crm.contact.list.json`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -33,6 +36,7 @@ export const sendToBitrix = async (formData: FormDataType) => {
     if (existingContact) {
       contactId = existingContact.ID;
     } else {
+      // Create new contact
       const contactCreateRes = await fetch(`${baseUrl}/crm.contact.add.json`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -54,6 +58,7 @@ export const sendToBitrix = async (formData: FormDataType) => {
       contactId = contactCreateResult.result;
     }
 
+    // Prepare and create deal
     const titlePrefix = existingContact ? "Повторная заявка" : "Новый клиент";
     const dealPayload = {
       fields: {
@@ -86,6 +91,7 @@ export const sendToBitrix = async (formData: FormDataType) => {
 
     const dealId = dealResult.result;
 
+    // Add timeline comment
     const commentText = `${existingContact ? `⚠️ Повторная заявка\n` : ""}📝 Новая заявка с сайта
 👤 Имя: ${formData.name}
 📞 Телефон: ${phoneDigits}
@@ -110,8 +116,7 @@ export const sendToBitrix = async (formData: FormDataType) => {
     });
 
     return true;
-  }
-  catch (error) {
+  } catch (error) {
     console.error("Fetch error:", error);
     return false;
   }
